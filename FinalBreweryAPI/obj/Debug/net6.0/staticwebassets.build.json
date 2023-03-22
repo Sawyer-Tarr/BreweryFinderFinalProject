@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9F0vOvQLhRKp48nuegGVNJacdvuBY77fQYjnIc81hsY=",
+  "Hash": "yPFR8MCvYpOkjTsStibRqoShWUY9Plonw9BMI2HA8Xw=",
   "Source": "FinalBreweryAPI",
   "BasePath": "_content/FinalBreweryAPI",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\sawye\\OneDrive\\Desktop\\Repos\\FinalBreweryAPI\\FinalBreweryAPI\\wwwroot\\img\\beer-background.jpg",
+      "SourceId": "FinalBreweryAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sawye\\OneDrive\\Desktop\\Repos\\FinalBreweryAPI\\FinalBreweryAPI\\wwwroot\\",
+      "BasePath": "_content/FinalBreweryAPI",
+      "RelativePath": "img/beer-background.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\beer-background.jpg"
     },
     {
       "Identity": "C:\\Users\\sawye\\OneDrive\\Desktop\\Repos\\FinalBreweryAPI\\FinalBreweryAPI\\wwwroot\\js\\site.js",

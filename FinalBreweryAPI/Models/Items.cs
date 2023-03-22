@@ -8,13 +8,13 @@ namespace FinalBreweryAPI.Models
         public int Id { get; set; }
 
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [JsonProperty("brewery_type")]
         public string BreweryType { get; set; }
 
         [JsonProperty("street")]
-        public string Street { get; set; }
+        public string? Street { get; set; }
 
         [JsonProperty("address_2")]
         public string? Address2 { get; set; }
@@ -44,15 +44,18 @@ namespace FinalBreweryAPI.Models
         public double Latitude { get; set; }
 
         [JsonProperty("phone")]
-        public double Phone { get; set; }
+        public double? Phone { get; set; }
 
         [JsonProperty("website_url")]
-        public string WebsiteURL { get; set; }
+        public string? WebsiteURL { get; set; }
 
         [JsonProperty("updated_at")]
         public string UpdatedAt { get; set; }
 
         [JsonProperty("created_at")]
         public string CreatedAt { get; set; }
+
+       
+        public List<Items> Props { get; set; }
     }
 }

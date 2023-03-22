@@ -1,52 +1,31 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Security.AccessControl;
+using Microsoft.DotNet.Scaffolding.Shared.CodeModifier.CodeChange;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using RestSharp;
 
 namespace FinalBreweryAPI.Models
 {
+    //By State with addition of Drop Down State list
+    //public async Task<Items> BreweryAPICall(string state)
+
     public class APICall
     {
-        public async Task<Items> BreweryAPICall()
+        public static List<Root> BreweryAPICall()
         {
-            var client = new HttpClient();
-
             
+            var items = new Items();
+            var client = new RestClient($"https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries?by_state=Missouri");
+            var request = new RestRequest();
+            request.AddHeader("X-RapidAPI-Key", "95e6116b23mshd25623c7e1eef4ap1fdb4fjsn3841aa601faf");
+            request.AddHeader("X-RapidAPI-Host", "brianiswu-open-brewery-db-v1.p.rapidapi.com");
+            var response = client.Execute(request).Content;
+            var roots = JsonConvert.DeserializeObject<List<Root>>(response);
 
-            var request = new HttpRequestMessage
-            {
-                Method = HttpMethod.Get,
-                RequestUri = new Uri("https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries"),
-                Headers =
-                {
-                    { "X-RapidAPI-Key", "95e6116b23mshd25623c7e1eef4ap1fdb4fjsn3841aa601faf" },
-                    { "X-RapidAPI-Host", "brianiswu-open-brewery-db-v1.p.rapidapi.com" },
-                },
-            };
-
-
-            //var brewObject = ;
-            var body = "";
-            using (var response = await client.SendAsync(request))
-            {
-                response.EnsureSuccessStatusCode();
-                body = await response.Content.ReadAsStringAsync();
-            }
-            var brewObject = JArray.Parse(body);
-            //Console.WriteLine(brewObject);
-            var items = new Items()
-            {
-                Name = brewObject[0]["name"].ToString(),
-                WebsiteURL = brewObject[0]["website_url"].ToString(),
-                Street = brewObject[0]["street"].ToString(),
-                Phone = ((double)brewObject[0]["phone"]),
-
-            };
-            //items.Name = brewObject[0]["name"].ToString();
-            //items.WebsiteURL = brewObject[14];
-            return items;
-
-
-            //return brewObject;
+            return roots;
         }
+
     }
 }

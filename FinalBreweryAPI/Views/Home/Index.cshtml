@@ -1,8 +1,55 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model States 
+
+<link rel="stylesheet" type="text/css" href="~/css/site.css"/>
 
 <div class="text-center">
-    <h1 class="display-4">Welcome to the Brewery Finder</h1>
-    <p>Click <a href="Home/ViewBrewery">here</a> to find the breweries near you.</p>
+    <h1 class="display-4" style="color: black">Welcome to the Brewery Finder</h1>
+    <p style="color: black">Click <a href="https://localhost:7234/Home/ViewBrewery">here</a> to find breweries near you.</p>
+</div>
+
+@*@using (Html.BeginForm("ViewBrewery", "Home", "Post"))
+{
+<div class="form-group">
+    <label class="title" for="">Select a State</label>
+    <br />
+    <select class="form-control" name="State" value="">
+        @foreach (var st in States.options)
+        {
+            <option value = "@st">@st</option>
+        }
+    </select>
+</div>
+}*@
+
+<div class="main">
+
+    <style>
+        body, html {
+            height: 100%;
+        }
+
+        body {
+            background-image: url(./img/beer-background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        .container {
+            width: 80%
+        }
+
+        .fixed-header {
+            top: 0;
+        }
+
+        .fixed-footer {
+            bottom: 0;
+        }
+    </style>
 </div>

@@ -15,16 +15,15 @@ namespace FinalBreweryAPI.Controllers
 
         public IActionResult Index()
         {
+            
             return View();
         }
 
 
-        [HttpGet]
-        public async Task<IActionResult> ViewBrewery()
+        public IActionResult ViewBrewery()
         {
-            var api = new APICall();
-            var brewery = await api.BreweryAPICall();
-            return View(brewery);
+            var breweries = APICall.BreweryAPICall();
+            return View(breweries);
         }
 
         public IActionResult Privacy()

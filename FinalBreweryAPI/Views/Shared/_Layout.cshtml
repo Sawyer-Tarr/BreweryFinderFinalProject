@@ -3,16 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - FinalBreweryAPI</title>
+    <title>@ViewData["Title"] - Final Brewery API</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FinalBreweryAPI.styles.css" asp-append-version="true" />
+    
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FinalBreweryAPI</a>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-black border-bottom box-shadow mb-3">
+            <div class="container-fluid" style="color: white">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" >Final Brewery API</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -37,6 +38,15 @@
     </div>
 
     <footer class="border-top footer text-muted">
+        <style type="text/css">
+            .border-top.footer.text-muted {
+                position: fixed;
+                padding: 10px 10px 0px 10px;
+                bottom: 0;
+                background-color: black;
+            }
+        </style>
+
         <div class="container">
             &copy; 2023 - FinalBreweryAPI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
@@ -47,3 +57,5 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+

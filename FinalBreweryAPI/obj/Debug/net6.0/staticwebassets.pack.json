@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\sawye\\OneDrive\\Desktop\\Repos\\FinalBreweryAPI\\FinalBreweryAPI\\wwwroot\\img\\beer-background.jpg",
+      "PackagePath": "staticwebassets\\img\\beer-background.jpg"
+    },
+    {
       "Id": "C:\\Users\\sawye\\OneDrive\\Desktop\\Repos\\FinalBreweryAPI\\FinalBreweryAPI\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

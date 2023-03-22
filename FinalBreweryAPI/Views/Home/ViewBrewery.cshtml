@@ -1,15 +1,53 @@
-﻿@using FinalBreweryAPI.Models
-@model Items
+﻿@model List<Root>
 
-@*<div class="text-center">
-    <h1 class="display-4">Welcome to the Brewery Finder</h1>
+<head>
+    <style type="text/css">
+        .flex-container {
+            width: contain;
+            height: auto; 
+            background-color: white;
+            flex-direction: row;
+        }
+        .flex-box {
+            width: 300px; 
+            height: 200px; 
+            text-align: center;
+            line-height: 200px; 
+            border-radius: 10px;
+            margin: 10px; 
+            background-color: lawngreen;
+           
+        }
+        .text-name {
+            font-size: 30px;
+            text-align:left;
+            
+            
+        }
+        .text-center {
+            font-size: 25px;
+            text-align: left;
+        }
+    </style>
+</head>
 
-</div>*@
-@if (@Model != null)
-{
-    <h1>@Model.Name</h1>
-    <h2>@Model.WebsiteURL</h2>
-    <h2>@Model.Street</h2>
-    <h2>@Model.Phone</h2>
-    
-}
+<body>
+    <div class="flex-container">
+        @foreach (var item in Model)
+        {
+        <div class="flex-box">
+                <h1 class="text-name" style="color: red">@item.name</h1>
+                <h2 class="text-center">@item.city</h2>
+                <h2 class="text-center">@item.street</h2>
+                <h2 class="text-center">@item.website_url</h2>
+                <br />
+        </div>
+        }
+    </div>
+    <style>
+        body {
+            background-color: gold;
+        }
+    </style>
+</body>
+
