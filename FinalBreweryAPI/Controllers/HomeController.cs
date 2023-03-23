@@ -15,14 +15,13 @@ namespace FinalBreweryAPI.Controllers
 
         public IActionResult Index()
         {
-            
+          
             return View();
         }
 
-
-        public IActionResult ViewBrewery()
+        public IActionResult ViewBrewery(Root root)
         {
-            var breweries = APICall.BreweryAPICall();
+            var breweries = APICall.BreweryAPICall(root.state);
             return View(breweries);
         }
 

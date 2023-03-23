@@ -10,7 +10,7 @@
             display: grid;
             justify-content: space-evenly;
             gap: 15px;
-            padding-bottom:10px;
+            padding-bottom:80px;
         }
         .flex-box {
             flex: 33.33%; 
@@ -39,10 +39,10 @@
         @foreach (var item in Model)
         {
             <div class="flex-box">
-                <h1 class="text-name" style="color: red">@item.name</h1>
+                <h1 class="text-name" style="color: black">@item.name</h1>
                 <h2 class="text-center">City: @item.city</h2>
                 <h2 class="text-center">Street: @item.street</h2>
-                <h2 class="text-center">Website: @item.website_url</h2>
+                <h2 class="text-center">Website: <a href="@item.website_url">@item.website_url</a></h2>
             </div>
         }
     </div>

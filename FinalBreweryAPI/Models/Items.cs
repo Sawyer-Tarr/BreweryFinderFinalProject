@@ -54,8 +54,5 @@ namespace FinalBreweryAPI.Models
 
         [JsonProperty("created_at")]
         public string CreatedAt { get; set; }
-
-       
-        public List<Items> Props { get; set; }
     }
 }

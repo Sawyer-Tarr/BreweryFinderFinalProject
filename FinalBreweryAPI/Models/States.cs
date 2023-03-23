@@ -2,7 +2,7 @@
 {
     public class States
     {
-        public List<string> options { get; set; } = new List<string>()
+        public List<string> anotherName { get; set; } = new List<string>()
         {
             "Alabama",
             "Alaska",

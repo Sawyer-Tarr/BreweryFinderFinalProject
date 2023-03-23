@@ -1,9 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@model States 
 
-<link rel="stylesheet" type="text/css" href="~/css/site.css"/>
+@model Root
+
+<link rel="stylesheet" type="text/css" href="~/css/site.css" />
 
 <head class="main">
 
@@ -11,7 +12,6 @@
         body, html {
             height: 100%;
         }
-
         body {
             background-image: url(./img/beer-background.jpg);
             background-repeat: no-repeat;
@@ -20,27 +20,103 @@
             padding-top: 60px;
             padding-bottom: 40px;
         }
-        
     </style>
 </head>
 
 <div class="text-center">
     <h1 class="display-4" style="color: black">Welcome to the Brewery Finder</h1>
-    <p style="color: black">Click <a href="https://localhost:7234/Home/ViewBrewery">here</a> to find breweries near you.</p>
+    <p style="color: black">Please select a state to find breweries near you.</p>
 </div>
 
 
 
-@*@using (Html.BeginForm("ViewBrewery", "Home", "Post"))
+@using (Html.BeginForm("ViewBrewery", "Home", "Post"))
 {
-<div class="form-group">
-    <label class="title" for="">Select a State</label>
+    <div class="form-group">
+        <label class="state" for="">Select a State</label>
+        <br />
+
+        <select class="form-control" name="state" value="">
+            <option value="Alabama">Alabama</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arkansas">Arkansas</option>
+            <option value="California">California</option>
+            <option value="Colorado">Colorado</option>
+            <option value="Connecticut">Connecticut</option>
+            <option value="Delaware">Delaware</option>
+            <option value="Florida">Florida</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Idaho">Idaho</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Kansas">Kansas</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Louisiana">Louisiana</option>
+            <option value="Maine">Maine</option>
+            <option value="Maryland">Maryland</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Minnesota">Minnesota</option>
+            <option value="Mississippi">Mississippi</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Montana">Montana</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Nevada">Nevada</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New Mexico">New Mexico</option>
+            <option value="New York">New York</option>
+            <option value="North Carolina">North Carolina</option>
+            <option value="North Dakota">North Dakota</option>
+            <option value="Ohio">Ohio</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Oregon">Oregon</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Rhode Island">Rhode Island</option>
+            <option value="South Carolina">South Carolina</option>
+            <option value="South Dakota">South Dakota</option>
+            <option value="Tennessee">Tennessee</option>
+            <option value="Texas">Texas</option>
+            <option value="Utah">Utah</option>
+            <option value="Vermont">Vermont</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Washington">Washington</option>
+            <option value="West Virginia">West Virginia</option>
+            <option value="Wisconsin">Wisconsin</option>
+            <option value="Wyoming">Wyoming</option>
+
+        </select>
+    </div>
     <br />
-    <select class="form-control" name="State" value="">
-        @foreach (var st in States.options)
-        {
-            <option value = "@st">@st</option>
+    <input type="submit" value="Submit State" class="btn btn-primary" />
+}
+
+
+@*SEARCH BAR
+@*<div class="searchbar">
+    <form id="form"> 
+        <input type="search" id="query" name="q" placeholder="Search State..." />
+        <button>Search</button>
+    </form>
+    <style>
+
+        form {
+            width: 300px;
+            height: 44px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-left: 50px;
         }
-    </select>
-</div>
-}*@
+    </style>
+</div>*@
+
+@*<form id="form" role="search" asp asp-controller="Home" asp-action="ViewBrewery">
+    <input type="search" id="query" name="state"
+           placeholder="Search..."
+           aria-label="Search through site content">
+    <button>Search</button>
+</form>*@
