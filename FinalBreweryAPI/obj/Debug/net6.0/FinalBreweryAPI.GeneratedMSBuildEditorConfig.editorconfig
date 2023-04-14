@@ -16,10 +16,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\sawye\OneDrive\Desktop\Repos\FinalBreweryAPI\FinalBreweryAPI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/sawye/OneDrive/Desktop/Repos/FinalBreweryAPI/FinalBreweryAPI/Views/Home/BreweryAPICall.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCcmV3ZXJ5QVBJQ2FsbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/sawye/OneDrive/Desktop/Repos/FinalBreweryAPI/FinalBreweryAPI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

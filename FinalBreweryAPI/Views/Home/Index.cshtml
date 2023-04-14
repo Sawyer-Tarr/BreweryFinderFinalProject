@@ -12,6 +12,7 @@
         body, html {
             height: 100%;
         }
+
         body {
             background-image: url(./img/beer-background.jpg);
             background-repeat: no-repeat;
@@ -19,6 +20,19 @@
             height: 100%;
             padding-top: 60px;
             padding-bottom: 40px;
+        }
+        .btn-primary {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 10px;
+            border-radius: 5px;
+        } 
+        .btn-primary:hover {
+            border-width: 2px;
+            color: black;
+            background-color: white;
+            
         }
     </style>
 </head>
@@ -28,8 +42,7 @@
     <p style="color: black">Please select a state to find breweries near you.</p>
 </div>
 
-
-
+@*DROP DOWN MENU*@
 @using (Html.BeginForm("ViewBrewery", "Home", "Post"))
 {
     <div class="form-group">
@@ -90,7 +103,7 @@
         </select>
     </div>
     <br />
-    <input type="submit" value="Submit State" class="btn btn-primary" />
+    <input type="submit" value="Submit State" class="btn-primary" />
 }
 
 
@@ -113,10 +126,3 @@
         }
     </style>
 </div>*@
-
-@*<form id="form" role="search" asp asp-controller="Home" asp-action="ViewBrewery">
-    <input type="search" id="query" name="state"
-           placeholder="Search..."
-           aria-label="Search through site content">
-    <button>Search</button>
-</form>*@

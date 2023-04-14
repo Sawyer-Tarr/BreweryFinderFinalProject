@@ -8,9 +8,6 @@ using RestSharp;
 
 namespace FinalBreweryAPI.Models
 {
-    //By State with addition of Drop Down State list
-    //public async Task<Items> BreweryAPICall(string state)
-
     public class APICall
     {
         public static List<Root> BreweryAPICall(string state)
@@ -24,6 +21,5 @@ namespace FinalBreweryAPI.Models
             var roots = JsonConvert.DeserializeObject<List<Root>>(response);
             return roots;
         }
-
     }
 }
